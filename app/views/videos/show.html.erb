@@ -1,0 +1,17 @@
+<p>
+	<h1><%= @video.title %></h1>
+</p>
+
+<div class="row">
+	<div class="col-md-4 center">
+		<h3>Watched by</h3>
+		<h4><%= @video.users.size %> users</h4>
+		<% @video.users.each do |user| %>
+		<ul>
+			<li><%= user.name %></li>
+		</ul>
+		<% end %>
+	</div>
+</div>
+
+<h5><%= link_to 'Return to Videos Listing', videos_path %></h5>

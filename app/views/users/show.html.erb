@@ -1,0 +1,13 @@
+<p>
+	<h1><%= @user.name %></h1>
+</p>
+		<h3>Watched videos</h3>
+		<%= @user.videos.each do |video| %>
+		<ul>
+			<h5>Video #<%= video.id %>, <%= video.title %></h5>
+		</ul>
+		<% end %>
+	
+
+
+<h5><%= link_to 'Return to Users Listing', users_path %></h5>

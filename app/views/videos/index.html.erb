@@ -6,7 +6,7 @@
 <% @videos.each do |video| %>
 	<div class="row">
 
-		<div class="col-lg-8 well">
+		<div class="col-lg-6 well">
 			<h4><%= link_to video.title, video_path(video) %></h4>
 			<p>
 				<span class='quiet'><small> <%= time_ago_in_words(video.created_at) %> ago</small></span>

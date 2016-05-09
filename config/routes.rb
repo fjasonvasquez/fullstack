@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  get '/home', to: 'dashboard#home'
   #resources refactors:
   # get '/users', to: 'users#index'
   # get '/users', to: 'users#show', as: 'users'
-
   #same with videos
 
   resources :users, only: [:index, :show]

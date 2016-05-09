@@ -1,13 +1,14 @@
-<p>
-	<h1><%= @user.name %></h1>
-</p>
-		<h3>Watched videos</h3>
-		<%= @user.videos.each do |video| %>
+<%= render @user %>
+
+<div class="row">
+	<div class="col-md-6 center">
+		<h3>Viewed <%= @user.videos.size %> videos</h3>
+		<% @user.videos.each do |video| %>
 		<ul>
-			<h5>Video #<%= video.id %>, <%= video.title %></h5>
+			<li>Video #<%= video.id %>, <%= video.title %></li>
 		</ul>
 		<% end %>
-	
-
+	</div>
+</div>
 
 <h5><%= link_to 'Return to Users Listing', users_path %></h5>

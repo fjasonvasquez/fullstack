@@ -1,11 +1,8 @@
-<p>
-	<h1><%= @video.title %></h1>
-</p>
+<%= render @video %>
 
 <div class="row">
 	<div class="col-md-4 center">
-		<h3>Watched by</h3>
-		<h4><%= @video.users.size %> users</h4>
+		<h3>Watched by <%= @video.users.size %> users</h3>
 		<% @video.users.each do |user| %>
 		<ul>
 			<li><%= user.name %></li>
